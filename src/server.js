@@ -1,5 +1,9 @@
-const app = require("./app")
+const app = require("./app"); 
 
-app.listen(3100, () => {
-    console.log("server rodando na porta 3100");
-});
+const PORT = process.env.PORT || 3333; 
+
+app.listen(PORT, () => { 
+
+  console.log("Servido rodando na porta " + PORT); 
+
+}); 

@@ -9,7 +9,7 @@ const MotoristaOrcamento = require("../models/MotoristaOrcamento");
 const Orcamento = require("../models/Orcamento");
 
 //nova instancia da classe sequelize passando as configurações do banco de dados
-const connection = new Sequelize(dbConfig);
+const connection = new Sequelize(dbConfig.url, dbConfig.config);
 //inicializando as models
 Cliente.init(connection);
 Motorista.init(connection);
